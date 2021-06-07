@@ -1,0 +1,37 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $darkGrayishBlue;
+}
+
+h1 {
+  font-size: 2.5em;
+  @include maxMedia(767) {
+    font-size: 1.85em;
+  }
+}
+
+h2 {
+  font-size: 2em;
+  @include maxMedia(767) {
+    font-size: 1.75em;
+  }
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+.text {
+  text-align: center;
+  width: 700px;
+  @include maxMedia(767) {
+    width: 100%;
+  }
+  h2, h3 {
+    margin: 0;
+  }
+}

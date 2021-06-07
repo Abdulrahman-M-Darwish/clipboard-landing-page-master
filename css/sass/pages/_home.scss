@@ -1,0 +1,142 @@
+.header {
+  padding-top: 88px;
+  padding-bottom: 88px;
+  position: relative;
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-size: cover;
+    z-index: -1;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .logo {
+      margin-bottom: 30px;
+    }
+    .text {
+      margin-bottom: 20px;
+      h1 {
+      margin-bottom: 5px;
+    }
+      p {
+        @include maxMedia(767) {
+          font-size: $fontSize;
+        }
+        font-size: $fontSize + 2px;
+      }
+    }
+  }
+}
+
+.services {
+  padding-top: 88px;
+  padding-bottom: 88px;
+  @include maxMedia(991) {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .text {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 88px;
+  }
+  .content {
+    display: flex;
+    justify-content: space-between;
+    @include maxMedia(991) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .img-holder {
+      width: 45%;
+      position: relative;
+      @include maxMedia(991) {
+        width: auto;
+      }
+      img {
+        position: absolute;
+        left: -30px;
+        @include maxMedia(991) {
+          position: static;
+          left: auto;
+          max-width: 100%;
+        }
+      }
+    }
+    .features {
+      @include maxMedia(991) {
+        text-align: center;
+      }
+      .feat {
+        width: 55%;
+        @include maxMedia(991) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.design {
+  padding-top: 88px;
+  padding-bottom: 88px;
+  .container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .text {
+      margin-bottom: 88px;
+    }
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+.about-product {
+  padding-top: 88px;
+  padding-bottom: 88px;
+  .container {
+    .text {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 88px;
+    }
+    .specifications {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 20px;
+      .box {
+        text-align: center;
+      }
+    }
+    .sponsers {
+      margin-top: 88px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 88px 20px;
+      place-items: center;
+    }
+  }
+}
+
+.ios {
+  padding-top: 88px;
+  padding-bottom: 88px;
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .text {
+    margin-bottom: 30px;
+  }
+}

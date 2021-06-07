@@ -1,0 +1,21 @@
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  @include minMedia(768) {
+    width: 750px;
+  }
+  @include minMedia(992) {
+    width: 970px;
+  }
+  @include minMedia(1200) {
+    width: 1170px;
+  }
+}
+
+.center-xs {
+  @include maxMedia(767) {
+    text-align: center;
+  }
+}

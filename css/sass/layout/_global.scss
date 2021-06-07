@@ -1,0 +1,22 @@
+* {
+  @include prefixer(box-sizing, border-box, webkit moz ms o);
+}
+
+body {
+  font: {
+    size: $fontSize;
+    family: "Bai Jamjuree", sans-serif;
+  }
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  color: $grayishBlue;
+  line-height: 1.8;
+}

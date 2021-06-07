@@ -1,0 +1,54 @@
+.button-holder {
+  display: flex;
+  @include maxMedia(767) {
+    flex-direction: column;
+  }
+  @include maxMedia(450) {
+    width: 100%;
+  }
+}
+
+.button-strong-cyan,
+.button-light-blue {
+  padding: 16px 40px;
+  color: white;
+  border: none;
+  text-decoration: none;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: fit-content;
+  outline: none;
+  cursor: pointer;
+  @include maxMedia(767) {
+    margin-bottom: 20px;
+  }
+  @include maxMedia(450) {
+    width: 100%;
+  }
+}
+
+.button-strong-cyan {
+  background-color: $strongCyan;
+  margin-right: 20px;
+  box-shadow:
+  0 4px 12px rgba($color: $strongCyan, $alpha: .6),
+  inset 0 -3px 0px rgba($color: #000000, $alpha: .2);
+  transition: background-color .2s linear;
+  &:hover {
+    background-color: lighten($color: $strongCyan, $amount: 3px);
+  }
+}
+
+.button-light-blue {
+  background-color: $lightBlue;
+  box-shadow:
+  0 4px 12px rgba($color: $lightBlue, $alpha: .6),
+  inset 0 -3px 0px rgba($color: #000000, $alpha: .2);
+  transition: background-color .2s linear;
+  &:hover {
+    background-color: lighten($color: $lightBlue, $amount: 3px);
+  }
+}
