@@ -180,45 +180,32 @@ h3 {
 .services {
   padding-top: 88px;
   padding-bottom: 88px; }
-  @media (max-width: 991px) {
-    .services {
-      padding-right: 15px;
-      padding-left: 15px; } }
   .services .text {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
     margin-bottom: 88px; }
-  .services .content {
-    display: flex;
-    justify-content: space-between; }
-    @media (max-width: 991px) {
-      .services .content {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center; } }
-    .services .content .img-holder {
-      width: 45%;
-      position: relative; }
+  .services .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 88px; }
+    @media (max-width: 450px) {
+      .services .container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); } }
+    .services .container .img-holder img {
+      position: relative;
+      left: -130px;
+      max-width: 120%; }
       @media (max-width: 991px) {
-        .services .content .img-holder {
-          width: auto; } }
-      .services .content .img-holder img {
-        position: absolute;
-        left: -30px; }
-        @media (max-width: 991px) {
-          .services .content .img-holder img {
-            position: static;
-            left: auto;
-            max-width: 100%; } }
+        .services .container .img-holder img {
+          left: auto;
+          max-width: 100%; } }
     @media (max-width: 991px) {
-      .services .content .features {
+      .services .container .features {
         text-align: center; } }
-    .services .content .features .feat {
-      width: 55%; }
-      @media (max-width: 991px) {
-        .services .content .features .feat {
-          width: 100%; } }
+    @media (max-width: 991px) {
+      .services .container .features .feat {
+        width: 100%; } }
 
 .design {
   padding-top: 88px;
